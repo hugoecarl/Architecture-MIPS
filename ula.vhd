@@ -7,7 +7,7 @@ use ieee.numeric_std.all;
 entity ULA is
 	generic
 		 (
-			  addr : natural := 8;
+			  addr : natural := 32;
 			  op_code : natural:= 2
 		 );
 	port(
@@ -53,31 +53,5 @@ begin
 				end if;
 			end if;
 	end process;	
-
---	S <= std_logic_vector(IN_mux) when OP = "00"; --MOV 
---	process (clk) is
---		begin
---			if (rising_edge(clk)) then
---					if(OP = "00") then S <= std_logic_vector(IN_mux); --MOV 
---					end if;
---					
---					if(OP = "01") then S <= std_logic_vector(unsigned(IN_mux) + unsigned(IN_banco)); --ADD
---					end if;
---					
---					if(OP = "10") then 
---							if(IN_mux = IN_banco) then FLAG <= '1'; --COMP e COMPR
---							else FLAG <= '0';
---							end if;
---					end if;
---					
---					if(OP = "11") then 
---							if(IN_mux = IN_banco) then FLAG <= '1'; --COMPI
---																S <= "11111111";
---							else FLAG <= '0';
---								  S <= "00000000";
---							end if;
---					end if;
---			end if;
---	end process;
 
 end architecture;
