@@ -8,7 +8,7 @@ entity ULA is
 	generic
 		 (
 			  addr : natural := 32;
-			  op_code : natural:= 2
+			  op_code : natural:= 5
 		 );
 	port(
 			clk: in std_logic;
