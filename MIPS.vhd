@@ -64,8 +64,9 @@ architecture MIPS_top of MIPS is
 		
 		rom: entity work.rom
 		port map(
-			q => rom_data, 
-			addr => pc_out --
+			clk =>clk,
+			Dado => rom_data, 
+			Endereco => pc_out --
 		);
 	end;
 	
