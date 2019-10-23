@@ -11,9 +11,8 @@ entity MIPS is
 	);
 		
 	port(
-		clk : in std_logic
-		pcontrolebanco 
-		ula_instr: in std_logic_vector(5 downto 0);
+		clk, we_uc : in std_logic; 
+		ula_instr: in std_logic_vector(5 downto 0)
 
 	);
 end entity;
@@ -22,8 +21,8 @@ architecture MIPS_top of MIPS is
 	
 	signal ula_out, s1, s2: std_logic_vector(dados-1 downto 0);
 	signal rom_data, rom_addr, mux2_out,rom_in  : std_logic_vector(addr_width-1 downto 0); 
-	signal flag_uc, we_uc: std_logic;
-	signal ula_instr: std_logic_vector(5 downto 0);
+	signal flag_uc: std_logic; --we_uc aqui 
+	--signal ula_instr: std_logic_vector(5 downto 0);
 	signal pc_i,pc_out: std_logic_vector(dados-1 downto 0);
 
 	begin
