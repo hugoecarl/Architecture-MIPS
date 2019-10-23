@@ -12,6 +12,8 @@ entity MIPS is
 		
 	port(
 		clk : in std_logic
+		pcontrolebanco 
+		ula_instr: in std_logic_vector(5 downto 0);
 
 	);
 end entity;
@@ -22,14 +24,14 @@ architecture MIPS_top of MIPS is
 	signal rom_data, rom_addr, mux2_out,rom_in  : std_logic_vector(addr_width-1 downto 0); 
 	signal flag_uc, we_uc: std_logic;
 	signal ula_instr: std_logic_vector(5 downto 0);
-	signal pc_i,pc_out: std_logic_vector(31 downto 0);
+	signal pc_i,pc_out: std_logic_vector(dados-1 downto 0);
 
 	begin
 	
 		ula: entity work.ula
 		port map(
 				clk=>clk,
-				IN_mux=>mux2_out,
+				IN_mux=>s1,
 				IN_banco=>s2,
 				OP=>ula_instr, ----
 				S=>ula_out,
@@ -40,9 +42,9 @@ architecture MIPS_top of MIPS is
 		BancoDeRegistradores: entity work.BancoDeRegistradores
 		port map(
 			clk=>clk,
-			enderecoA=>rom_in(25 downto 21),
-			enderecoB=>rom_in(20 downto 16),
-			enderecoC=>rom_in(15 downto 11),
+			enderecoA=>rom_data(25 downto 21),
+			enderecoB=>rom_data(20 downto 16),
+			enderecoC=>rom_data(15 downto 11),
 			dadoEscritaC=>ula_out,
 			escreveC=>we_uc,
 			saidaA=>s1,
@@ -51,15 +53,15 @@ architecture MIPS_top of MIPS is
 	  
 	  	pc: entity work.pc
 		port map(
-			pc_i=>pc_i(31 downto 24),
+			pc_i=>pc_i,
 			clk=>clk,
-			pc_o=>pc_out(31 downto 24) --
+			pc_o=>pc_out --
 		);
 		
 		somadorGenerico: entity work.somadorGenerico
 		port map(
-			entradaA=>pc_out(31 downto 24), --
-			saida=> pc_i(31 downto 24)
+			entradaA=>pc_out, --
+			saida=> pc_i
 		);
 		
 		rom: entity work.rom

@@ -5,7 +5,7 @@ use ieee.numeric_std.all;           --Soma (esta biblioteca =ieee)
 entity somadorGenerico is
     generic
     (
-        larguraDados : natural := 8
+        larguraDados : natural := 32
     );
     port
     (
