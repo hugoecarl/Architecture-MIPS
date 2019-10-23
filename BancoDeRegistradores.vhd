@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 -- Baseado no apendice C (Register Files) do COD (Patterson & Hennessy).
 
-entity bancoRegistradores is
+entity BancoDeRegistradores is
     generic
     (
         larguraDados        : natural := 32;
@@ -27,7 +27,7 @@ entity bancoRegistradores is
     );
 end entity;
 
-architecture comportamento of bancoRegistradores is
+architecture comportamento of BancoDeRegistradores is
 
     subtype palavra_t is std_logic_vector((larguraDados-1) downto 0);
     type memoria_t is array(2**larguraEndBancoRegs-1 downto 0) of palavra_t;

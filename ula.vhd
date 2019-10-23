@@ -8,7 +8,7 @@ entity ULA is
 	generic
 		 (
 			  addr : natural := 32;
-			  op_code : natural:= 5
+			  op_code : natural:= 6
 		 );
 	port(
 			clk: in std_logic;
@@ -23,21 +23,19 @@ end entity ULA;
 
 architecture ula1 of ULA is
 
-	signal resultadoMov, resultadoAdd, resultadoCOmp : std_logic_vector(addr-1 downto 0);
+	signal resultadoSub, resultadoAdd, resultadoCOmp : std_logic_vector(addr-1 downto 0);
 	signal resultadoFlag : boolean;
 
 	
 begin
-	resultadoMov <= std_logic_vector(IN_mux);
+	resultadoSub <= std_logic_vector(unsigned(IN_mux) - unsigned(IN_banco));
 	resultadoAdd <= std_logic_vector(unsigned(IN_mux) + unsigned(IN_banco));
-	resultadoComp <= "11111111" when IN_mux = IN_banco else "00000000";
+	resultadoComp <= "11111111111111111111111111111111" when IN_mux = IN_banco else "00000000000000000000000000000000";
 	
 	with OP select
-	S <= resultadoMov when "00",
-				resultadoAdd when "01",
-				resultadoComp when "11",
-				resultadoComp when "10",
-				"00000000" when others;
+	S <=		resultadoAdd when "100000",
+				resultadoSub when "100010",
+				"00000000000000000000000000000000" when others;
 				
 	resultadoFlag <= (IN_mux = IN_banco) 
 	and (OP = "10" 
