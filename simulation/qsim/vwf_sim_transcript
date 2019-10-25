@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS -c MIPS --vector_source="C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/Waveform3.vwf" --testbench_file="C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/simulation/qsim/Waveform3.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS -c MIPS --vector_source="C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/Waveform6.vwf" --testbench_file="C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/simulation/qsim/Waveform6.vwf.vht"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -25,13 +25,12 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Fri Oct 25 09:01:56 2019
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS -c MIPS --vector_source=C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/Waveform3.vwf --testbench_file=C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/simulation/qsim/Waveform3.vwf.vht
-Info (119004): Automatically selected device EP4CE6F17C6 for design MIPS
-Info (119005): Fitting design with smaller device may be possible, but smaller device must be specified
+    Info: Processing started: Fri Oct 25 10:22:42 2019
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS -c MIPS --vector_source=C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/Waveform6.vwf --testbench_file=C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/simulation/qsim/Waveform6.vwf.vht
+Info (119004): Automatically selected device EP4CE6E22C6 for design MIPS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
-ut pin "ula_out_teste[12]" in vector source file when writing test bench files
+g output pin "ula_out_teste[11]" in vector source file when writing test bench files
 
 Completed successfully. 
 
@@ -55,17 +54,16 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Fri Oct 25 09:01:59 2019
+    Info: Processing started: Fri Oct 25 10:22:43 2019
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/simulation/qsim/ MIPS -c MIPS
-Info (119004): Automatically selected device EP4CE6F17C6 for design MIPS
-Info (119005): Fitting design with smaller device may be possible, but smaller device must be specified
+Info (119004): Automatically selected device EP4CE6E22C6 for design MIPS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file MIPS.vho in folder "C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4645 megabytes
-    Info: Processing ended: Fri Oct 25 09:02:00 2019
+    Info: Peak virtual memory: 4646 megabytes
+    Info: Processing ended: Fri Oct 25 10:22:44 2019
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
 
@@ -83,12 +81,11 @@ Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # 10.5b
 
-
 # do MIPS.do
 
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:02:02 on Oct 25,2019
+# Start time: 10:22:45 on Oct 25,2019
 # vcom -work work MIPS.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -96,29 +93,28 @@ Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
 # -- Loading package VITAL_Timing
 # -- Loading package VITAL_Primitives
 # -- Loading package dffeas_pack
+
 # -- Loading package altera_primitives_components
 # -- Loading package cycloneive_atom_pack
 # -- Loading package cycloneive_components
-
 # -- Compiling entity MIPS
 # -- Compiling architecture structure of MIPS
-
-# End time: 09:02:02 on Oct 25,2019, Elapsed time: 0:00:00
+# End time: 10:22:45 on Oct 25,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:02:02 on Oct 25,2019
-# vcom -work work Waveform3.vwf.vht 
+# Start time: 10:22:45 on Oct 25,2019
+# vcom -work work Waveform6.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity MIPS_vhd_vec_tst
-# -- Compiling architecture MIPS_arch of MIPS_vhd_vec_tst
 
-# End time: 09:02:02 on Oct 25,2019, Elapsed time: 0:00:00
+# -- Compiling architecture MIPS_arch of MIPS_vhd_vec_tst
+# End time: 10:22:45 on Oct 25,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.MIPS_vhd_vec_tst 
-# Start time: 09:02:02 on Oct 25,2019
+# Start time: 10:22:45 on Oct 25,2019
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -135,24 +131,24 @@ Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
 # Loading cycloneive.cycloneive_io_ibuf(arch)
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 38029 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 29421 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#33
 
-# End time: 09:02:03 on Oct 25,2019, Elapsed time: 0:00:01
+# End time: 10:22:46 on Oct 25,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/Waveform3.vwf...
+Reading C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/Waveform6.vwf...
 
 Reading C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/simulation/qsim/MIPS.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/simulation/qsim/MIPS_20191025090203.sim.vwf
+Writing the resulting VWF to C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/simulation/qsim/MIPS_20191025102246.sim.vwf
 
 Finished VCD to VWF conversion.
 

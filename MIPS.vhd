@@ -13,9 +13,7 @@ entity MIPS is
 	port(
 		clk, we_uc : in std_logic; 
 		ula_instr: in std_logic;
-		ula_out_teste: out std_logic_vector(31 downto 0);
-		pc_out_teste: out std_logic_vector(31 downto 0)
-
+		ula_out_teste: out std_logic_vector(31 downto 0)
 	);
 end entity;
 	
@@ -72,6 +70,5 @@ architecture MIPS_top of MIPS is
 		);
 		
 		ula_out_teste <= ula_out;
-		pc_out_teste <= pc_out;
 	end;
 	

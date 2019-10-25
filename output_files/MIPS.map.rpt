@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS
-Thu Oct 24 17:47:54 2019
+Fri Oct 25 10:22:36 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -52,16 +52,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Oct 24 17:47:54 2019       ;
+; Analysis & Synthesis Status        ; Successful - Fri Oct 25 10:22:36 2019       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; MIPS                                        ;
 ; Top-level Entity Name              ; MIPS                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 195                                         ;
-;     Total combinational functions  ; 163                                         ;
-;     Dedicated logic registers      ; 96                                          ;
-; Total registers                    ; 96                                          ;
-; Total pins                         ; 67                                          ;
+; Total logic elements               ; 171                                         ;
+;     Total combinational functions  ; 139                                         ;
+;     Dedicated logic registers      ; 72                                          ;
+; Total registers                    ; 72                                          ;
+; Total pins                         ; 35                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -186,36 +186,36 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 195       ;
-;                                             ;           ;
-; Total combinational functions               ; 163       ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 90        ;
-;     -- 3 input functions                    ; 36        ;
-;     -- <=2 input functions                  ; 37        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 103       ;
-;     -- arithmetic mode                      ; 60        ;
-;                                             ;           ;
-; Total registers                             ; 96        ;
-;     -- Dedicated logic registers            ; 96        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 67        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 96        ;
-; Total fan-out                               ; 925       ;
-; Average fan-out                             ; 2.35      ;
-+---------------------------------------------+-----------+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimated Total logic elements              ; 171           ;
+;                                             ;               ;
+; Total combinational functions               ; 139           ;
+; Logic element usage by number of LUT inputs ;               ;
+;     -- 4 input functions                    ; 90            ;
+;     -- 3 input functions                    ; 36            ;
+;     -- <=2 input functions                  ; 13            ;
+;                                             ;               ;
+; Logic elements by mode                      ;               ;
+;     -- normal mode                          ; 103           ;
+;     -- arithmetic mode                      ; 36            ;
+;                                             ;               ;
+; Total registers                             ; 72            ;
+;     -- Dedicated logic registers            ; 72            ;
+;     -- I/O registers                        ; 0             ;
+;                                             ;               ;
+; I/O pins                                    ; 35            ;
+;                                             ;               ;
+; Embedded Multiplier 9-bit elements          ; 0             ;
+;                                             ;               ;
+; Maximum fan-out node                        ; PC:pc|pc_o[7] ;
+; Maximum fan-out                             ; 84            ;
+; Total fan-out                               ; 767           ;
+; Average fan-out                             ; 2.73          ;
++---------------------------------------------+---------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -223,9 +223,9 @@ refer to the applicable agreement for further details.
 +------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                             ; Entity Name          ; Library Name ;
 +------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+----------------------+--------------+
-; |MIPS                                          ; 163 (0)             ; 96 (0)                    ; 0           ; 0            ; 0       ; 0         ; 67   ; 0            ; |MIPS                                           ; MIPS                 ; work         ;
+; |MIPS                                          ; 139 (0)             ; 72 (0)                    ; 0           ; 0            ; 0       ; 0         ; 35   ; 0            ; |MIPS                                           ; MIPS                 ; work         ;
 ;    |BancoDeRegistradores:BancoDeRegistradores| ; 59 (59)             ; 66 (66)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|BancoDeRegistradores:BancoDeRegistradores ; BancoDeRegistradores ; work         ;
-;    |PC:pc|                                     ; 30 (30)             ; 30 (30)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|PC:pc                                     ; PC                   ; work         ;
+;    |PC:pc|                                     ; 6 (6)               ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|PC:pc                                     ; PC                   ; work         ;
 ;    |ULA:ula|                                   ; 70 (70)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ULA:ula                                   ; ULA                  ; work         ;
 ;    |rom:rom|                                   ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|rom:rom                                   ; rom                  ; work         ;
 +------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+----------------------+--------------+
@@ -237,8 +237,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------+----------------------------------------+
 ; Register name                                              ; Reason for Removal                     ;
 +------------------------------------------------------------+----------------------------------------+
-; PC:pc|pc_o[1]                                              ; Merged with PC:pc|pc_o[0]              ;
-; PC:pc|pc_o[0]                                              ; Stuck at GND due to stuck port data_in ;
 ; BancoDeRegistradores:BancoDeRegistradores|registrador~166  ; Lost fanout                            ;
 ; BancoDeRegistradores:BancoDeRegistradores|registrador~167  ; Lost fanout                            ;
 ; BancoDeRegistradores:BancoDeRegistradores|registrador~168  ; Lost fanout                            ;
@@ -1135,6 +1133,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; BancoDeRegistradores:BancoDeRegistradores|registrador~165  ; Stuck at GND due to stuck port data_in ;
 ; BancoDeRegistradores:BancoDeRegistradores|registrador~325  ; Stuck at GND due to stuck port data_in ;
 ; BancoDeRegistradores:BancoDeRegistradores|registrador~389  ; Stuck at GND due to stuck port data_in ;
+; PC:pc|pc_o[8..31]                                          ; Lost fanout                            ;
 ; BancoDeRegistradores:BancoDeRegistradores|registrador~102  ; Lost fanout                            ;
 ; BancoDeRegistradores:BancoDeRegistradores|registrador~103  ; Lost fanout                            ;
 ; BancoDeRegistradores:BancoDeRegistradores|registrador~104  ; Lost fanout                            ;
@@ -1197,7 +1196,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; BancoDeRegistradores:BancoDeRegistradores|registrador~59   ; Lost fanout                            ;
 ; BancoDeRegistradores:BancoDeRegistradores|registrador~60   ; Lost fanout                            ;
 ; BancoDeRegistradores:BancoDeRegistradores|registrador~61   ; Lost fanout                            ;
-; Total Number of Removed Registers = 960                    ;                                        ;
+; Total Number of Removed Registers = 982                    ;                                        ;
 +------------------------------------------------------------+----------------------------------------+
 
 
@@ -1268,7 +1267,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 96    ;
+; Total registers                              ; 72    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -1367,23 +1366,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 67                          ;
-; cycloneiii_ff         ; 96                          ;
+; boundary_port         ; 35                          ;
+; cycloneiii_ff         ; 72                          ;
 ;     ENA               ; 66                          ;
-;     plain             ; 30                          ;
-; cycloneiii_lcell_comb ; 164                         ;
-;     arith             ; 60                          ;
-;         2 data inputs ; 28                          ;
+;     plain             ; 6                           ;
+; cycloneiii_lcell_comb ; 139                         ;
+;     arith             ; 36                          ;
+;         2 data inputs ; 4                           ;
 ;         3 data inputs ; 32                          ;
-;     normal            ; 104                         ;
-;         0 data inputs ; 1                           ;
+;     normal            ; 103                         ;
 ;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 5                           ;
 ;         3 data inputs ; 4                           ;
 ;         4 data inputs ; 90                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 4.79                        ;
+; Average LUT depth     ; 5.32                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1402,7 +1400,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Oct 24 17:47:42 2019
+    Info: Processing started: Fri Oct 25 10:22:24 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS -c MIPS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1422,31 +1420,28 @@ Info (12021): Found 2 design units, including 1 entities, in source file bancode
     Info (12022): Found design unit 1: BancoDeRegistradores-comportamento File: C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/BancoDeRegistradores.vhd Line: 30
     Info (12023): Found entity 1: BancoDeRegistradores File: C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/BancoDeRegistradores.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file mips.vhd
-    Info (12022): Found design unit 1: MIPS-MIPS_top File: C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/MIPS.vhd Line: 22
+    Info (12022): Found design unit 1: MIPS-MIPS_top File: C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/MIPS.vhd Line: 20
     Info (12023): Found entity 1: MIPS File: C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/MIPS.vhd Line: 6
 Info (12127): Elaborating entity "MIPS" for the top level hierarchy
-Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ula" File: C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/MIPS.vhd Line: 32
-Info (12128): Elaborating entity "BancoDeRegistradores" for hierarchy "BancoDeRegistradores:BancoDeRegistradores" File: C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/MIPS.vhd Line: 42
-Info (12128): Elaborating entity "PC" for hierarchy "PC:pc" File: C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/MIPS.vhd Line: 54
-Info (12128): Elaborating entity "somadorGenerico" for hierarchy "somadorGenerico:somadorGenerico" File: C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/MIPS.vhd Line: 61
-Info (12128): Elaborating entity "rom" for hierarchy "rom:rom" File: C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/MIPS.vhd Line: 67
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ula" File: C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/MIPS.vhd Line: 30
+Info (12128): Elaborating entity "BancoDeRegistradores" for hierarchy "BancoDeRegistradores:BancoDeRegistradores" File: C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/MIPS.vhd Line: 40
+Info (12128): Elaborating entity "PC" for hierarchy "PC:pc" File: C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/MIPS.vhd Line: 52
+Info (12128): Elaborating entity "somadorGenerico" for hierarchy "somadorGenerico:somadorGenerico" File: C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/MIPS.vhd Line: 59
+Info (12128): Elaborating entity "rom" for hierarchy "rom:rom" File: C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/MIPS.vhd Line: 65
 Warning (10541): VHDL Signal Declaration warning at rom.vhd(19): used implicit default value for signal "memROM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/rom.vhd Line: 19
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276007): RAM logic "BancoDeRegistradores:BancoDeRegistradores|registrador" is uninferred due to asynchronous read logic File: C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/BancoDeRegistradores.vhd Line: 46
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "pc_out_teste[0]" is stuck at GND File: C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/MIPS.vhd Line: 17
-    Warning (13410): Pin "pc_out_teste[1]" is stuck at GND File: C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/MIPS.vhd Line: 17
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 830 registers lost all their fanouts during netlist optimizations.
+Info (17049): 854 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 294 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 238 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 227 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4792 megabytes
-    Info: Processing ended: Thu Oct 24 17:47:54 2019
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 203 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4790 megabytes
+    Info: Processing ended: Fri Oct 25 10:22:36 2019
     Info: Elapsed time: 00:00:12
     Info: Total CPU time (on all processors): 00:00:26
 

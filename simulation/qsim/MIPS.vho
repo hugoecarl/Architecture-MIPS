@@ -16,10 +16,10 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition"
 
--- DATE "10/25/2019 09:02:00"
+-- DATE "10/25/2019 10:22:44"
 
 -- 
--- Device: Altera EP4CE6F17C6 Package FBGA256
+-- Device: Altera EP4CE6E22C6 Package TQFP144
 -- 
 
 -- 
@@ -38,8 +38,7 @@ ENTITY 	MIPS IS
 	clk : IN std_logic;
 	we_uc : IN std_logic;
 	ula_instr : IN std_logic;
-	ula_out_teste : OUT std_logic_vector(31 DOWNTO 0);
-	pc_out_teste : OUT std_logic_vector(31 DOWNTO 0)
+	ula_out_teste : OUT std_logic_vector(31 DOWNTO 0)
 	);
 END MIPS;
 
@@ -57,7 +56,6 @@ SIGNAL ww_clk : std_logic;
 SIGNAL ww_we_uc : std_logic;
 SIGNAL ww_ula_instr : std_logic;
 SIGNAL ww_ula_out_teste : std_logic_vector(31 DOWNTO 0);
-SIGNAL ww_pc_out_teste : std_logic_vector(31 DOWNTO 0);
 SIGNAL \ula_out_teste[0]~output_o\ : std_logic;
 SIGNAL \ula_out_teste[1]~output_o\ : std_logic;
 SIGNAL \ula_out_teste[2]~output_o\ : std_logic;
@@ -90,50 +88,18 @@ SIGNAL \ula_out_teste[28]~output_o\ : std_logic;
 SIGNAL \ula_out_teste[29]~output_o\ : std_logic;
 SIGNAL \ula_out_teste[30]~output_o\ : std_logic;
 SIGNAL \ula_out_teste[31]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[0]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[1]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[2]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[3]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[4]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[5]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[6]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[7]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[8]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[9]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[10]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[11]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[12]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[13]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[14]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[15]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[16]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[17]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[18]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[19]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[20]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[21]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[22]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[23]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[24]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[25]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[26]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[27]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[28]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[29]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[30]~output_o\ : std_logic;
-SIGNAL \pc_out_teste[31]~output_o\ : std_logic;
 SIGNAL \clk~input_o\ : std_logic;
 SIGNAL \we_uc~input_o\ : std_logic;
-SIGNAL \pc|pc_o[2]~87_combout\ : std_logic;
-SIGNAL \pc|pc_o[3]~29_combout\ : std_logic;
-SIGNAL \pc|pc_o[3]~30\ : std_logic;
-SIGNAL \pc|pc_o[4]~31_combout\ : std_logic;
-SIGNAL \pc|pc_o[4]~32\ : std_logic;
-SIGNAL \pc|pc_o[5]~33_combout\ : std_logic;
-SIGNAL \pc|pc_o[5]~34\ : std_logic;
-SIGNAL \pc|pc_o[6]~35_combout\ : std_logic;
-SIGNAL \pc|pc_o[6]~36\ : std_logic;
-SIGNAL \pc|pc_o[7]~37_combout\ : std_logic;
+SIGNAL \pc|pc_o[2]~15_combout\ : std_logic;
+SIGNAL \pc|pc_o[3]~5_combout\ : std_logic;
+SIGNAL \pc|pc_o[3]~6\ : std_logic;
+SIGNAL \pc|pc_o[4]~7_combout\ : std_logic;
+SIGNAL \pc|pc_o[4]~8\ : std_logic;
+SIGNAL \pc|pc_o[5]~9_combout\ : std_logic;
+SIGNAL \pc|pc_o[5]~10\ : std_logic;
+SIGNAL \pc|pc_o[6]~11_combout\ : std_logic;
+SIGNAL \pc|pc_o[6]~12\ : std_logic;
+SIGNAL \pc|pc_o[7]~13_combout\ : std_logic;
 SIGNAL \rom|memROM~0_combout\ : std_logic;
 SIGNAL \BancoDeRegistradores|registrador~1084_combout\ : std_logic;
 SIGNAL \BancoDeRegistradores|registrador~38_q\ : std_logic;
@@ -365,54 +331,6 @@ SIGNAL \BancoDeRegistradores|registrador~357_q\ : std_logic;
 SIGNAL \BancoDeRegistradores|saidaA[31]~31_combout\ : std_logic;
 SIGNAL \ula|Add0~133\ : std_logic;
 SIGNAL \ula|Add0~135_combout\ : std_logic;
-SIGNAL \pc|pc_o[7]~38\ : std_logic;
-SIGNAL \pc|pc_o[8]~39_combout\ : std_logic;
-SIGNAL \pc|pc_o[8]~40\ : std_logic;
-SIGNAL \pc|pc_o[9]~41_combout\ : std_logic;
-SIGNAL \pc|pc_o[9]~42\ : std_logic;
-SIGNAL \pc|pc_o[10]~43_combout\ : std_logic;
-SIGNAL \pc|pc_o[10]~44\ : std_logic;
-SIGNAL \pc|pc_o[11]~45_combout\ : std_logic;
-SIGNAL \pc|pc_o[11]~46\ : std_logic;
-SIGNAL \pc|pc_o[12]~47_combout\ : std_logic;
-SIGNAL \pc|pc_o[12]~48\ : std_logic;
-SIGNAL \pc|pc_o[13]~49_combout\ : std_logic;
-SIGNAL \pc|pc_o[13]~50\ : std_logic;
-SIGNAL \pc|pc_o[14]~51_combout\ : std_logic;
-SIGNAL \pc|pc_o[14]~52\ : std_logic;
-SIGNAL \pc|pc_o[15]~53_combout\ : std_logic;
-SIGNAL \pc|pc_o[15]~54\ : std_logic;
-SIGNAL \pc|pc_o[16]~55_combout\ : std_logic;
-SIGNAL \pc|pc_o[16]~56\ : std_logic;
-SIGNAL \pc|pc_o[17]~57_combout\ : std_logic;
-SIGNAL \pc|pc_o[17]~58\ : std_logic;
-SIGNAL \pc|pc_o[18]~59_combout\ : std_logic;
-SIGNAL \pc|pc_o[18]~60\ : std_logic;
-SIGNAL \pc|pc_o[19]~61_combout\ : std_logic;
-SIGNAL \pc|pc_o[19]~62\ : std_logic;
-SIGNAL \pc|pc_o[20]~63_combout\ : std_logic;
-SIGNAL \pc|pc_o[20]~64\ : std_logic;
-SIGNAL \pc|pc_o[21]~65_combout\ : std_logic;
-SIGNAL \pc|pc_o[21]~66\ : std_logic;
-SIGNAL \pc|pc_o[22]~67_combout\ : std_logic;
-SIGNAL \pc|pc_o[22]~68\ : std_logic;
-SIGNAL \pc|pc_o[23]~69_combout\ : std_logic;
-SIGNAL \pc|pc_o[23]~70\ : std_logic;
-SIGNAL \pc|pc_o[24]~71_combout\ : std_logic;
-SIGNAL \pc|pc_o[24]~72\ : std_logic;
-SIGNAL \pc|pc_o[25]~73_combout\ : std_logic;
-SIGNAL \pc|pc_o[25]~74\ : std_logic;
-SIGNAL \pc|pc_o[26]~75_combout\ : std_logic;
-SIGNAL \pc|pc_o[26]~76\ : std_logic;
-SIGNAL \pc|pc_o[27]~77_combout\ : std_logic;
-SIGNAL \pc|pc_o[27]~78\ : std_logic;
-SIGNAL \pc|pc_o[28]~79_combout\ : std_logic;
-SIGNAL \pc|pc_o[28]~80\ : std_logic;
-SIGNAL \pc|pc_o[29]~81_combout\ : std_logic;
-SIGNAL \pc|pc_o[29]~82\ : std_logic;
-SIGNAL \pc|pc_o[30]~83_combout\ : std_logic;
-SIGNAL \pc|pc_o[30]~84\ : std_logic;
-SIGNAL \pc|pc_o[31]~85_combout\ : std_logic;
 SIGNAL \pc|pc_o\ : std_logic_vector(31 DOWNTO 0);
 
 BEGIN
@@ -421,7 +339,6 @@ ww_clk <= clk;
 ww_we_uc <= we_uc;
 ww_ula_instr <= ula_instr;
 ula_out_teste <= ww_ula_out_teste;
-pc_out_teste <= ww_pc_out_teste;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
@@ -778,358 +695,6 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \ula_out_teste[31]~output_o\);
 
-\pc_out_teste[0]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \pc_out_teste[0]~output_o\);
-
-\pc_out_teste[1]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \pc_out_teste[1]~output_o\);
-
-\pc_out_teste[2]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(2),
-	devoe => ww_devoe,
-	o => \pc_out_teste[2]~output_o\);
-
-\pc_out_teste[3]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(3),
-	devoe => ww_devoe,
-	o => \pc_out_teste[3]~output_o\);
-
-\pc_out_teste[4]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(4),
-	devoe => ww_devoe,
-	o => \pc_out_teste[4]~output_o\);
-
-\pc_out_teste[5]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(5),
-	devoe => ww_devoe,
-	o => \pc_out_teste[5]~output_o\);
-
-\pc_out_teste[6]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(6),
-	devoe => ww_devoe,
-	o => \pc_out_teste[6]~output_o\);
-
-\pc_out_teste[7]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(7),
-	devoe => ww_devoe,
-	o => \pc_out_teste[7]~output_o\);
-
-\pc_out_teste[8]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(8),
-	devoe => ww_devoe,
-	o => \pc_out_teste[8]~output_o\);
-
-\pc_out_teste[9]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(9),
-	devoe => ww_devoe,
-	o => \pc_out_teste[9]~output_o\);
-
-\pc_out_teste[10]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(10),
-	devoe => ww_devoe,
-	o => \pc_out_teste[10]~output_o\);
-
-\pc_out_teste[11]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(11),
-	devoe => ww_devoe,
-	o => \pc_out_teste[11]~output_o\);
-
-\pc_out_teste[12]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(12),
-	devoe => ww_devoe,
-	o => \pc_out_teste[12]~output_o\);
-
-\pc_out_teste[13]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(13),
-	devoe => ww_devoe,
-	o => \pc_out_teste[13]~output_o\);
-
-\pc_out_teste[14]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(14),
-	devoe => ww_devoe,
-	o => \pc_out_teste[14]~output_o\);
-
-\pc_out_teste[15]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(15),
-	devoe => ww_devoe,
-	o => \pc_out_teste[15]~output_o\);
-
-\pc_out_teste[16]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(16),
-	devoe => ww_devoe,
-	o => \pc_out_teste[16]~output_o\);
-
-\pc_out_teste[17]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(17),
-	devoe => ww_devoe,
-	o => \pc_out_teste[17]~output_o\);
-
-\pc_out_teste[18]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(18),
-	devoe => ww_devoe,
-	o => \pc_out_teste[18]~output_o\);
-
-\pc_out_teste[19]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(19),
-	devoe => ww_devoe,
-	o => \pc_out_teste[19]~output_o\);
-
-\pc_out_teste[20]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(20),
-	devoe => ww_devoe,
-	o => \pc_out_teste[20]~output_o\);
-
-\pc_out_teste[21]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(21),
-	devoe => ww_devoe,
-	o => \pc_out_teste[21]~output_o\);
-
-\pc_out_teste[22]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(22),
-	devoe => ww_devoe,
-	o => \pc_out_teste[22]~output_o\);
-
-\pc_out_teste[23]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(23),
-	devoe => ww_devoe,
-	o => \pc_out_teste[23]~output_o\);
-
-\pc_out_teste[24]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(24),
-	devoe => ww_devoe,
-	o => \pc_out_teste[24]~output_o\);
-
-\pc_out_teste[25]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(25),
-	devoe => ww_devoe,
-	o => \pc_out_teste[25]~output_o\);
-
-\pc_out_teste[26]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(26),
-	devoe => ww_devoe,
-	o => \pc_out_teste[26]~output_o\);
-
-\pc_out_teste[27]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(27),
-	devoe => ww_devoe,
-	o => \pc_out_teste[27]~output_o\);
-
-\pc_out_teste[28]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(28),
-	devoe => ww_devoe,
-	o => \pc_out_teste[28]~output_o\);
-
-\pc_out_teste[29]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(29),
-	devoe => ww_devoe,
-	o => \pc_out_teste[29]~output_o\);
-
-\pc_out_teste[30]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(30),
-	devoe => ww_devoe,
-	o => \pc_out_teste[30]~output_o\);
-
-\pc_out_teste[31]~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \pc|pc_o\(31),
-	devoe => ww_devoe,
-	o => \pc_out_teste[31]~output_o\);
-
 \clk~input\ : cycloneive_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -1150,9 +715,9 @@ PORT MAP (
 	i => ww_we_uc,
 	o => \we_uc~input_o\);
 
-\pc|pc_o[2]~87\ : cycloneive_lcell_comb
+\pc|pc_o[2]~15\ : cycloneive_lcell_comb
 -- Equation(s):
--- \pc|pc_o[2]~87_combout\ = !\pc|pc_o\(2)
+-- \pc|pc_o[2]~15_combout\ = !\pc|pc_o\(2)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1161,7 +726,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \pc|pc_o\(2),
-	combout => \pc|pc_o[2]~87_combout\);
+	combout => \pc|pc_o[2]~15_combout\);
 
 \pc|pc_o[2]\ : dffeas
 -- pragma translate_off
@@ -1171,15 +736,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~input_o\,
-	d => \pc|pc_o[2]~87_combout\,
+	d => \pc|pc_o[2]~15_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \pc|pc_o\(2));
 
-\pc|pc_o[3]~29\ : cycloneive_lcell_comb
+\pc|pc_o[3]~5\ : cycloneive_lcell_comb
 -- Equation(s):
--- \pc|pc_o[3]~29_combout\ = (\pc|pc_o\(3) & (\pc|pc_o\(2) $ (VCC))) # (!\pc|pc_o\(3) & (\pc|pc_o\(2) & VCC))
--- \pc|pc_o[3]~30\ = CARRY((\pc|pc_o\(3) & \pc|pc_o\(2)))
+-- \pc|pc_o[3]~5_combout\ = (\pc|pc_o\(3) & (\pc|pc_o\(2) $ (VCC))) # (!\pc|pc_o\(3) & (\pc|pc_o\(2) & VCC))
+-- \pc|pc_o[3]~6\ = CARRY((\pc|pc_o\(3) & \pc|pc_o\(2)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1190,8 +755,8 @@ PORT MAP (
 	dataa => \pc|pc_o\(3),
 	datab => \pc|pc_o\(2),
 	datad => VCC,
-	combout => \pc|pc_o[3]~29_combout\,
-	cout => \pc|pc_o[3]~30\);
+	combout => \pc|pc_o[3]~5_combout\,
+	cout => \pc|pc_o[3]~6\);
 
 \pc|pc_o[3]\ : dffeas
 -- pragma translate_off
@@ -1201,15 +766,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~input_o\,
-	d => \pc|pc_o[3]~29_combout\,
+	d => \pc|pc_o[3]~5_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \pc|pc_o\(3));
 
-\pc|pc_o[4]~31\ : cycloneive_lcell_comb
+\pc|pc_o[4]~7\ : cycloneive_lcell_comb
 -- Equation(s):
--- \pc|pc_o[4]~31_combout\ = (\pc|pc_o\(4) & (!\pc|pc_o[3]~30\)) # (!\pc|pc_o\(4) & ((\pc|pc_o[3]~30\) # (GND)))
--- \pc|pc_o[4]~32\ = CARRY((!\pc|pc_o[3]~30\) # (!\pc|pc_o\(4)))
+-- \pc|pc_o[4]~7_combout\ = (\pc|pc_o\(4) & (!\pc|pc_o[3]~6\)) # (!\pc|pc_o\(4) & ((\pc|pc_o[3]~6\) # (GND)))
+-- \pc|pc_o[4]~8\ = CARRY((!\pc|pc_o[3]~6\) # (!\pc|pc_o\(4)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1219,9 +784,9 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \pc|pc_o\(4),
 	datad => VCC,
-	cin => \pc|pc_o[3]~30\,
-	combout => \pc|pc_o[4]~31_combout\,
-	cout => \pc|pc_o[4]~32\);
+	cin => \pc|pc_o[3]~6\,
+	combout => \pc|pc_o[4]~7_combout\,
+	cout => \pc|pc_o[4]~8\);
 
 \pc|pc_o[4]\ : dffeas
 -- pragma translate_off
@@ -1231,15 +796,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~input_o\,
-	d => \pc|pc_o[4]~31_combout\,
+	d => \pc|pc_o[4]~7_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \pc|pc_o\(4));
 
-\pc|pc_o[5]~33\ : cycloneive_lcell_comb
+\pc|pc_o[5]~9\ : cycloneive_lcell_comb
 -- Equation(s):
--- \pc|pc_o[5]~33_combout\ = (\pc|pc_o\(5) & (\pc|pc_o[4]~32\ $ (GND))) # (!\pc|pc_o\(5) & (!\pc|pc_o[4]~32\ & VCC))
--- \pc|pc_o[5]~34\ = CARRY((\pc|pc_o\(5) & !\pc|pc_o[4]~32\))
+-- \pc|pc_o[5]~9_combout\ = (\pc|pc_o\(5) & (\pc|pc_o[4]~8\ $ (GND))) # (!\pc|pc_o\(5) & (!\pc|pc_o[4]~8\ & VCC))
+-- \pc|pc_o[5]~10\ = CARRY((\pc|pc_o\(5) & !\pc|pc_o[4]~8\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1249,9 +814,9 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \pc|pc_o\(5),
 	datad => VCC,
-	cin => \pc|pc_o[4]~32\,
-	combout => \pc|pc_o[5]~33_combout\,
-	cout => \pc|pc_o[5]~34\);
+	cin => \pc|pc_o[4]~8\,
+	combout => \pc|pc_o[5]~9_combout\,
+	cout => \pc|pc_o[5]~10\);
 
 \pc|pc_o[5]\ : dffeas
 -- pragma translate_off
@@ -1261,15 +826,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~input_o\,
-	d => \pc|pc_o[5]~33_combout\,
+	d => \pc|pc_o[5]~9_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \pc|pc_o\(5));
 
-\pc|pc_o[6]~35\ : cycloneive_lcell_comb
+\pc|pc_o[6]~11\ : cycloneive_lcell_comb
 -- Equation(s):
--- \pc|pc_o[6]~35_combout\ = (\pc|pc_o\(6) & (!\pc|pc_o[5]~34\)) # (!\pc|pc_o\(6) & ((\pc|pc_o[5]~34\) # (GND)))
--- \pc|pc_o[6]~36\ = CARRY((!\pc|pc_o[5]~34\) # (!\pc|pc_o\(6)))
+-- \pc|pc_o[6]~11_combout\ = (\pc|pc_o\(6) & (!\pc|pc_o[5]~10\)) # (!\pc|pc_o\(6) & ((\pc|pc_o[5]~10\) # (GND)))
+-- \pc|pc_o[6]~12\ = CARRY((!\pc|pc_o[5]~10\) # (!\pc|pc_o\(6)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1279,9 +844,9 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \pc|pc_o\(6),
 	datad => VCC,
-	cin => \pc|pc_o[5]~34\,
-	combout => \pc|pc_o[6]~35_combout\,
-	cout => \pc|pc_o[6]~36\);
+	cin => \pc|pc_o[5]~10\,
+	combout => \pc|pc_o[6]~11_combout\,
+	cout => \pc|pc_o[6]~12\);
 
 \pc|pc_o[6]\ : dffeas
 -- pragma translate_off
@@ -1291,27 +856,24 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~input_o\,
-	d => \pc|pc_o[6]~35_combout\,
+	d => \pc|pc_o[6]~11_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \pc|pc_o\(6));
 
-\pc|pc_o[7]~37\ : cycloneive_lcell_comb
+\pc|pc_o[7]~13\ : cycloneive_lcell_comb
 -- Equation(s):
--- \pc|pc_o[7]~37_combout\ = (\pc|pc_o\(7) & (\pc|pc_o[6]~36\ $ (GND))) # (!\pc|pc_o\(7) & (!\pc|pc_o[6]~36\ & VCC))
--- \pc|pc_o[7]~38\ = CARRY((\pc|pc_o\(7) & !\pc|pc_o[6]~36\))
+-- \pc|pc_o[7]~13_combout\ = \pc|pc_o\(7) $ (!\pc|pc_o[6]~12\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010010100001010",
+	lut_mask => "1010010110100101",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
 	dataa => \pc|pc_o\(7),
-	datad => VCC,
-	cin => \pc|pc_o[6]~36\,
-	combout => \pc|pc_o[7]~37_combout\,
-	cout => \pc|pc_o[7]~38\);
+	cin => \pc|pc_o[6]~12\,
+	combout => \pc|pc_o[7]~13_combout\);
 
 \pc|pc_o[7]\ : dffeas
 -- pragma translate_off
@@ -1321,7 +883,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~input_o\,
-	d => \pc|pc_o[7]~37_combout\,
+	d => \pc|pc_o[7]~13_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \pc|pc_o\(7));
@@ -4446,723 +4008,6 @@ PORT MAP (
 	cin => \ula|Add0~133\,
 	combout => \ula|Add0~135_combout\);
 
-\pc|pc_o[8]~39\ : cycloneive_lcell_comb
--- Equation(s):
--- \pc|pc_o[8]~39_combout\ = (\pc|pc_o\(8) & (!\pc|pc_o[7]~38\)) # (!\pc|pc_o\(8) & ((\pc|pc_o[7]~38\) # (GND)))
--- \pc|pc_o[8]~40\ = CARRY((!\pc|pc_o[7]~38\) # (!\pc|pc_o\(8)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \pc|pc_o\(8),
-	datad => VCC,
-	cin => \pc|pc_o[7]~38\,
-	combout => \pc|pc_o[8]~39_combout\,
-	cout => \pc|pc_o[8]~40\);
-
-\pc|pc_o[8]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~input_o\,
-	d => \pc|pc_o[8]~39_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \pc|pc_o\(8));
-
-\pc|pc_o[9]~41\ : cycloneive_lcell_comb
--- Equation(s):
--- \pc|pc_o[9]~41_combout\ = (\pc|pc_o\(9) & (\pc|pc_o[8]~40\ $ (GND))) # (!\pc|pc_o\(9) & (!\pc|pc_o[8]~40\ & VCC))
--- \pc|pc_o[9]~42\ = CARRY((\pc|pc_o\(9) & !\pc|pc_o[8]~40\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \pc|pc_o\(9),
-	datad => VCC,
-	cin => \pc|pc_o[8]~40\,
-	combout => \pc|pc_o[9]~41_combout\,
-	cout => \pc|pc_o[9]~42\);
-
-\pc|pc_o[9]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~input_o\,
-	d => \pc|pc_o[9]~41_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \pc|pc_o\(9));
-
-\pc|pc_o[10]~43\ : cycloneive_lcell_comb
--- Equation(s):
--- \pc|pc_o[10]~43_combout\ = (\pc|pc_o\(10) & (!\pc|pc_o[9]~42\)) # (!\pc|pc_o\(10) & ((\pc|pc_o[9]~42\) # (GND)))
--- \pc|pc_o[10]~44\ = CARRY((!\pc|pc_o[9]~42\) # (!\pc|pc_o\(10)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \pc|pc_o\(10),
-	datad => VCC,
-	cin => \pc|pc_o[9]~42\,
-	combout => \pc|pc_o[10]~43_combout\,
-	cout => \pc|pc_o[10]~44\);
-
-\pc|pc_o[10]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~input_o\,
-	d => \pc|pc_o[10]~43_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \pc|pc_o\(10));
-
-\pc|pc_o[11]~45\ : cycloneive_lcell_comb
--- Equation(s):
--- \pc|pc_o[11]~45_combout\ = (\pc|pc_o\(11) & (\pc|pc_o[10]~44\ $ (GND))) # (!\pc|pc_o\(11) & (!\pc|pc_o[10]~44\ & VCC))
--- \pc|pc_o[11]~46\ = CARRY((\pc|pc_o\(11) & !\pc|pc_o[10]~44\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \pc|pc_o\(11),
-	datad => VCC,
-	cin => \pc|pc_o[10]~44\,
-	combout => \pc|pc_o[11]~45_combout\,
-	cout => \pc|pc_o[11]~46\);
-
-\pc|pc_o[11]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~input_o\,
-	d => \pc|pc_o[11]~45_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \pc|pc_o\(11));
-
-\pc|pc_o[12]~47\ : cycloneive_lcell_comb
--- Equation(s):
--- \pc|pc_o[12]~47_combout\ = (\pc|pc_o\(12) & (!\pc|pc_o[11]~46\)) # (!\pc|pc_o\(12) & ((\pc|pc_o[11]~46\) # (GND)))
--- \pc|pc_o[12]~48\ = CARRY((!\pc|pc_o[11]~46\) # (!\pc|pc_o\(12)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \pc|pc_o\(12),
-	datad => VCC,
-	cin => \pc|pc_o[11]~46\,
-	combout => \pc|pc_o[12]~47_combout\,
-	cout => \pc|pc_o[12]~48\);
-
-\pc|pc_o[12]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~input_o\,
-	d => \pc|pc_o[12]~47_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \pc|pc_o\(12));
-
-\pc|pc_o[13]~49\ : cycloneive_lcell_comb
--- Equation(s):
--- \pc|pc_o[13]~49_combout\ = (\pc|pc_o\(13) & (\pc|pc_o[12]~48\ $ (GND))) # (!\pc|pc_o\(13) & (!\pc|pc_o[12]~48\ & VCC))
--- \pc|pc_o[13]~50\ = CARRY((\pc|pc_o\(13) & !\pc|pc_o[12]~48\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \pc|pc_o\(13),
-	datad => VCC,
-	cin => \pc|pc_o[12]~48\,
-	combout => \pc|pc_o[13]~49_combout\,
-	cout => \pc|pc_o[13]~50\);
-
-\pc|pc_o[13]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~input_o\,
-	d => \pc|pc_o[13]~49_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \pc|pc_o\(13));
-
-\pc|pc_o[14]~51\ : cycloneive_lcell_comb
--- Equation(s):
--- \pc|pc_o[14]~51_combout\ = (\pc|pc_o\(14) & (!\pc|pc_o[13]~50\)) # (!\pc|pc_o\(14) & ((\pc|pc_o[13]~50\) # (GND)))
--- \pc|pc_o[14]~52\ = CARRY((!\pc|pc_o[13]~50\) # (!\pc|pc_o\(14)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \pc|pc_o\(14),
-	datad => VCC,
-	cin => \pc|pc_o[13]~50\,
-	combout => \pc|pc_o[14]~51_combout\,
-	cout => \pc|pc_o[14]~52\);
-
-\pc|pc_o[14]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~input_o\,
-	d => \pc|pc_o[14]~51_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \pc|pc_o\(14));
-
-\pc|pc_o[15]~53\ : cycloneive_lcell_comb
--- Equation(s):
--- \pc|pc_o[15]~53_combout\ = (\pc|pc_o\(15) & (\pc|pc_o[14]~52\ $ (GND))) # (!\pc|pc_o\(15) & (!\pc|pc_o[14]~52\ & VCC))
--- \pc|pc_o[15]~54\ = CARRY((\pc|pc_o\(15) & !\pc|pc_o[14]~52\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \pc|pc_o\(15),
-	datad => VCC,
-	cin => \pc|pc_o[14]~52\,
-	combout => \pc|pc_o[15]~53_combout\,
-	cout => \pc|pc_o[15]~54\);
-
-\pc|pc_o[15]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~input_o\,
-	d => \pc|pc_o[15]~53_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \pc|pc_o\(15));
-
-\pc|pc_o[16]~55\ : cycloneive_lcell_comb
--- Equation(s):
--- \pc|pc_o[16]~55_combout\ = (\pc|pc_o\(16) & (!\pc|pc_o[15]~54\)) # (!\pc|pc_o\(16) & ((\pc|pc_o[15]~54\) # (GND)))
--- \pc|pc_o[16]~56\ = CARRY((!\pc|pc_o[15]~54\) # (!\pc|pc_o\(16)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \pc|pc_o\(16),
-	datad => VCC,
-	cin => \pc|pc_o[15]~54\,
-	combout => \pc|pc_o[16]~55_combout\,
-	cout => \pc|pc_o[16]~56\);
-
-\pc|pc_o[16]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~input_o\,
-	d => \pc|pc_o[16]~55_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \pc|pc_o\(16));
-
-\pc|pc_o[17]~57\ : cycloneive_lcell_comb
--- Equation(s):
--- \pc|pc_o[17]~57_combout\ = (\pc|pc_o\(17) & (\pc|pc_o[16]~56\ $ (GND))) # (!\pc|pc_o\(17) & (!\pc|pc_o[16]~56\ & VCC))
--- \pc|pc_o[17]~58\ = CARRY((\pc|pc_o\(17) & !\pc|pc_o[16]~56\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \pc|pc_o\(17),
-	datad => VCC,
-	cin => \pc|pc_o[16]~56\,
-	combout => \pc|pc_o[17]~57_combout\,
-	cout => \pc|pc_o[17]~58\);
-
-\pc|pc_o[17]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~input_o\,
-	d => \pc|pc_o[17]~57_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \pc|pc_o\(17));
-
-\pc|pc_o[18]~59\ : cycloneive_lcell_comb
--- Equation(s):
--- \pc|pc_o[18]~59_combout\ = (\pc|pc_o\(18) & (!\pc|pc_o[17]~58\)) # (!\pc|pc_o\(18) & ((\pc|pc_o[17]~58\) # (GND)))
--- \pc|pc_o[18]~60\ = CARRY((!\pc|pc_o[17]~58\) # (!\pc|pc_o\(18)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \pc|pc_o\(18),
-	datad => VCC,
-	cin => \pc|pc_o[17]~58\,
-	combout => \pc|pc_o[18]~59_combout\,
-	cout => \pc|pc_o[18]~60\);
-
-\pc|pc_o[18]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~input_o\,
-	d => \pc|pc_o[18]~59_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \pc|pc_o\(18));
-
-\pc|pc_o[19]~61\ : cycloneive_lcell_comb
--- Equation(s):
--- \pc|pc_o[19]~61_combout\ = (\pc|pc_o\(19) & (\pc|pc_o[18]~60\ $ (GND))) # (!\pc|pc_o\(19) & (!\pc|pc_o[18]~60\ & VCC))
--- \pc|pc_o[19]~62\ = CARRY((\pc|pc_o\(19) & !\pc|pc_o[18]~60\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \pc|pc_o\(19),
-	datad => VCC,
-	cin => \pc|pc_o[18]~60\,
-	combout => \pc|pc_o[19]~61_combout\,
-	cout => \pc|pc_o[19]~62\);
-
-\pc|pc_o[19]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~input_o\,
-	d => \pc|pc_o[19]~61_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \pc|pc_o\(19));
-
-\pc|pc_o[20]~63\ : cycloneive_lcell_comb
--- Equation(s):
--- \pc|pc_o[20]~63_combout\ = (\pc|pc_o\(20) & (!\pc|pc_o[19]~62\)) # (!\pc|pc_o\(20) & ((\pc|pc_o[19]~62\) # (GND)))
--- \pc|pc_o[20]~64\ = CARRY((!\pc|pc_o[19]~62\) # (!\pc|pc_o\(20)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \pc|pc_o\(20),
-	datad => VCC,
-	cin => \pc|pc_o[19]~62\,
-	combout => \pc|pc_o[20]~63_combout\,
-	cout => \pc|pc_o[20]~64\);
-
-\pc|pc_o[20]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~input_o\,
-	d => \pc|pc_o[20]~63_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \pc|pc_o\(20));
-
-\pc|pc_o[21]~65\ : cycloneive_lcell_comb
--- Equation(s):
--- \pc|pc_o[21]~65_combout\ = (\pc|pc_o\(21) & (\pc|pc_o[20]~64\ $ (GND))) # (!\pc|pc_o\(21) & (!\pc|pc_o[20]~64\ & VCC))
--- \pc|pc_o[21]~66\ = CARRY((\pc|pc_o\(21) & !\pc|pc_o[20]~64\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \pc|pc_o\(21),
-	datad => VCC,
-	cin => \pc|pc_o[20]~64\,
-	combout => \pc|pc_o[21]~65_combout\,
-	cout => \pc|pc_o[21]~66\);
-
-\pc|pc_o[21]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~input_o\,
-	d => \pc|pc_o[21]~65_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \pc|pc_o\(21));
-
-\pc|pc_o[22]~67\ : cycloneive_lcell_comb
--- Equation(s):
--- \pc|pc_o[22]~67_combout\ = (\pc|pc_o\(22) & (!\pc|pc_o[21]~66\)) # (!\pc|pc_o\(22) & ((\pc|pc_o[21]~66\) # (GND)))
--- \pc|pc_o[22]~68\ = CARRY((!\pc|pc_o[21]~66\) # (!\pc|pc_o\(22)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \pc|pc_o\(22),
-	datad => VCC,
-	cin => \pc|pc_o[21]~66\,
-	combout => \pc|pc_o[22]~67_combout\,
-	cout => \pc|pc_o[22]~68\);
-
-\pc|pc_o[22]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~input_o\,
-	d => \pc|pc_o[22]~67_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \pc|pc_o\(22));
-
-\pc|pc_o[23]~69\ : cycloneive_lcell_comb
--- Equation(s):
--- \pc|pc_o[23]~69_combout\ = (\pc|pc_o\(23) & (\pc|pc_o[22]~68\ $ (GND))) # (!\pc|pc_o\(23) & (!\pc|pc_o[22]~68\ & VCC))
--- \pc|pc_o[23]~70\ = CARRY((\pc|pc_o\(23) & !\pc|pc_o[22]~68\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \pc|pc_o\(23),
-	datad => VCC,
-	cin => \pc|pc_o[22]~68\,
-	combout => \pc|pc_o[23]~69_combout\,
-	cout => \pc|pc_o[23]~70\);
-
-\pc|pc_o[23]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~input_o\,
-	d => \pc|pc_o[23]~69_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \pc|pc_o\(23));
-
-\pc|pc_o[24]~71\ : cycloneive_lcell_comb
--- Equation(s):
--- \pc|pc_o[24]~71_combout\ = (\pc|pc_o\(24) & (!\pc|pc_o[23]~70\)) # (!\pc|pc_o\(24) & ((\pc|pc_o[23]~70\) # (GND)))
--- \pc|pc_o[24]~72\ = CARRY((!\pc|pc_o[23]~70\) # (!\pc|pc_o\(24)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \pc|pc_o\(24),
-	datad => VCC,
-	cin => \pc|pc_o[23]~70\,
-	combout => \pc|pc_o[24]~71_combout\,
-	cout => \pc|pc_o[24]~72\);
-
-\pc|pc_o[24]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~input_o\,
-	d => \pc|pc_o[24]~71_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \pc|pc_o\(24));
-
-\pc|pc_o[25]~73\ : cycloneive_lcell_comb
--- Equation(s):
--- \pc|pc_o[25]~73_combout\ = (\pc|pc_o\(25) & (\pc|pc_o[24]~72\ $ (GND))) # (!\pc|pc_o\(25) & (!\pc|pc_o[24]~72\ & VCC))
--- \pc|pc_o[25]~74\ = CARRY((\pc|pc_o\(25) & !\pc|pc_o[24]~72\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \pc|pc_o\(25),
-	datad => VCC,
-	cin => \pc|pc_o[24]~72\,
-	combout => \pc|pc_o[25]~73_combout\,
-	cout => \pc|pc_o[25]~74\);
-
-\pc|pc_o[25]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~input_o\,
-	d => \pc|pc_o[25]~73_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \pc|pc_o\(25));
-
-\pc|pc_o[26]~75\ : cycloneive_lcell_comb
--- Equation(s):
--- \pc|pc_o[26]~75_combout\ = (\pc|pc_o\(26) & (!\pc|pc_o[25]~74\)) # (!\pc|pc_o\(26) & ((\pc|pc_o[25]~74\) # (GND)))
--- \pc|pc_o[26]~76\ = CARRY((!\pc|pc_o[25]~74\) # (!\pc|pc_o\(26)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \pc|pc_o\(26),
-	datad => VCC,
-	cin => \pc|pc_o[25]~74\,
-	combout => \pc|pc_o[26]~75_combout\,
-	cout => \pc|pc_o[26]~76\);
-
-\pc|pc_o[26]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~input_o\,
-	d => \pc|pc_o[26]~75_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \pc|pc_o\(26));
-
-\pc|pc_o[27]~77\ : cycloneive_lcell_comb
--- Equation(s):
--- \pc|pc_o[27]~77_combout\ = (\pc|pc_o\(27) & (\pc|pc_o[26]~76\ $ (GND))) # (!\pc|pc_o\(27) & (!\pc|pc_o[26]~76\ & VCC))
--- \pc|pc_o[27]~78\ = CARRY((\pc|pc_o\(27) & !\pc|pc_o[26]~76\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \pc|pc_o\(27),
-	datad => VCC,
-	cin => \pc|pc_o[26]~76\,
-	combout => \pc|pc_o[27]~77_combout\,
-	cout => \pc|pc_o[27]~78\);
-
-\pc|pc_o[27]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~input_o\,
-	d => \pc|pc_o[27]~77_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \pc|pc_o\(27));
-
-\pc|pc_o[28]~79\ : cycloneive_lcell_comb
--- Equation(s):
--- \pc|pc_o[28]~79_combout\ = (\pc|pc_o\(28) & (!\pc|pc_o[27]~78\)) # (!\pc|pc_o\(28) & ((\pc|pc_o[27]~78\) # (GND)))
--- \pc|pc_o[28]~80\ = CARRY((!\pc|pc_o[27]~78\) # (!\pc|pc_o\(28)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \pc|pc_o\(28),
-	datad => VCC,
-	cin => \pc|pc_o[27]~78\,
-	combout => \pc|pc_o[28]~79_combout\,
-	cout => \pc|pc_o[28]~80\);
-
-\pc|pc_o[28]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~input_o\,
-	d => \pc|pc_o[28]~79_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \pc|pc_o\(28));
-
-\pc|pc_o[29]~81\ : cycloneive_lcell_comb
--- Equation(s):
--- \pc|pc_o[29]~81_combout\ = (\pc|pc_o\(29) & (\pc|pc_o[28]~80\ $ (GND))) # (!\pc|pc_o\(29) & (!\pc|pc_o[28]~80\ & VCC))
--- \pc|pc_o[29]~82\ = CARRY((\pc|pc_o\(29) & !\pc|pc_o[28]~80\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \pc|pc_o\(29),
-	datad => VCC,
-	cin => \pc|pc_o[28]~80\,
-	combout => \pc|pc_o[29]~81_combout\,
-	cout => \pc|pc_o[29]~82\);
-
-\pc|pc_o[29]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~input_o\,
-	d => \pc|pc_o[29]~81_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \pc|pc_o\(29));
-
-\pc|pc_o[30]~83\ : cycloneive_lcell_comb
--- Equation(s):
--- \pc|pc_o[30]~83_combout\ = (\pc|pc_o\(30) & (!\pc|pc_o[29]~82\)) # (!\pc|pc_o\(30) & ((\pc|pc_o[29]~82\) # (GND)))
--- \pc|pc_o[30]~84\ = CARRY((!\pc|pc_o[29]~82\) # (!\pc|pc_o\(30)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \pc|pc_o\(30),
-	datad => VCC,
-	cin => \pc|pc_o[29]~82\,
-	combout => \pc|pc_o[30]~83_combout\,
-	cout => \pc|pc_o[30]~84\);
-
-\pc|pc_o[30]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~input_o\,
-	d => \pc|pc_o[30]~83_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \pc|pc_o\(30));
-
-\pc|pc_o[31]~85\ : cycloneive_lcell_comb
--- Equation(s):
--- \pc|pc_o[31]~85_combout\ = \pc|pc_o\(31) $ (!\pc|pc_o[30]~84\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010110100101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \pc|pc_o\(31),
-	cin => \pc|pc_o[30]~84\,
-	combout => \pc|pc_o[31]~85_combout\);
-
-\pc|pc_o[31]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~input_o\,
-	d => \pc|pc_o[31]~85_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \pc|pc_o\(31));
-
 ww_ula_out_teste(0) <= \ula_out_teste[0]~output_o\;
 
 ww_ula_out_teste(1) <= \ula_out_teste[1]~output_o\;
@@ -5226,70 +4071,6 @@ ww_ula_out_teste(29) <= \ula_out_teste[29]~output_o\;
 ww_ula_out_teste(30) <= \ula_out_teste[30]~output_o\;
 
 ww_ula_out_teste(31) <= \ula_out_teste[31]~output_o\;
-
-ww_pc_out_teste(0) <= \pc_out_teste[0]~output_o\;
-
-ww_pc_out_teste(1) <= \pc_out_teste[1]~output_o\;
-
-ww_pc_out_teste(2) <= \pc_out_teste[2]~output_o\;
-
-ww_pc_out_teste(3) <= \pc_out_teste[3]~output_o\;
-
-ww_pc_out_teste(4) <= \pc_out_teste[4]~output_o\;
-
-ww_pc_out_teste(5) <= \pc_out_teste[5]~output_o\;
-
-ww_pc_out_teste(6) <= \pc_out_teste[6]~output_o\;
-
-ww_pc_out_teste(7) <= \pc_out_teste[7]~output_o\;
-
-ww_pc_out_teste(8) <= \pc_out_teste[8]~output_o\;
-
-ww_pc_out_teste(9) <= \pc_out_teste[9]~output_o\;
-
-ww_pc_out_teste(10) <= \pc_out_teste[10]~output_o\;
-
-ww_pc_out_teste(11) <= \pc_out_teste[11]~output_o\;
-
-ww_pc_out_teste(12) <= \pc_out_teste[12]~output_o\;
-
-ww_pc_out_teste(13) <= \pc_out_teste[13]~output_o\;
-
-ww_pc_out_teste(14) <= \pc_out_teste[14]~output_o\;
-
-ww_pc_out_teste(15) <= \pc_out_teste[15]~output_o\;
-
-ww_pc_out_teste(16) <= \pc_out_teste[16]~output_o\;
-
-ww_pc_out_teste(17) <= \pc_out_teste[17]~output_o\;
-
-ww_pc_out_teste(18) <= \pc_out_teste[18]~output_o\;
-
-ww_pc_out_teste(19) <= \pc_out_teste[19]~output_o\;
-
-ww_pc_out_teste(20) <= \pc_out_teste[20]~output_o\;
-
-ww_pc_out_teste(21) <= \pc_out_teste[21]~output_o\;
-
-ww_pc_out_teste(22) <= \pc_out_teste[22]~output_o\;
-
-ww_pc_out_teste(23) <= \pc_out_teste[23]~output_o\;
-
-ww_pc_out_teste(24) <= \pc_out_teste[24]~output_o\;
-
-ww_pc_out_teste(25) <= \pc_out_teste[25]~output_o\;
-
-ww_pc_out_teste(26) <= \pc_out_teste[26]~output_o\;
-
-ww_pc_out_teste(27) <= \pc_out_teste[27]~output_o\;
-
-ww_pc_out_teste(28) <= \pc_out_teste[28]~output_o\;
-
-ww_pc_out_teste(29) <= \pc_out_teste[29]~output_o\;
-
-ww_pc_out_teste(30) <= \pc_out_teste[30]~output_o\;
-
-ww_pc_out_teste(31) <= \pc_out_teste[31]~output_o\;
 END structure;
 
 

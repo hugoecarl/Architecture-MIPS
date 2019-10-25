@@ -1,5 +1,5 @@
 Flow report for MIPS
-Fri Oct 25 09:02:00 2019
+Fri Oct 25 10:22:44 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Oct 25 09:02:00 2019       ;
+; Flow Status                        ; Successful - Fri Oct 25 10:22:44 2019       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; MIPS                                        ;
 ; Top-level Entity Name              ; MIPS                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 195                                         ;
-;     Total combinational functions  ; 163                                         ;
-;     Dedicated logic registers      ; 96                                          ;
-; Total registers                    ; 96                                          ;
-; Total pins                         ; 67                                          ;
+; Total logic elements               ; 171                                         ;
+;     Total combinational functions  ; 139                                         ;
+;     Dedicated logic registers      ; 72                                          ;
+; Total registers                    ; 72                                          ;
+; Total pins                         ; 35                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/24/2019 17:47:43 ;
+; Start date & time ; 10/25/2019 10:22:25 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MIPS                ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589214.157195006321756         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 10995770589214.157200974415204         ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -88,16 +88,10 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4792 MB             ; 00:00:26                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4790 MB             ; 00:00:26                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4641 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4645 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4642 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4645 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4642 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4645 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4642 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4645 MB             ; 00:00:02                           ;
-; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:38                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4643 MB             ; 00:00:01                           ;
+; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:28                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -109,12 +103,6 @@ refer to the applicable agreement for further details.
 ; Analysis & Synthesis ; DESKTOP-VEV0473  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-VEV0473  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-VEV0473  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-VEV0473  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-VEV0473  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-VEV0473  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-VEV0473  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-VEV0473  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-VEV0473  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -122,13 +110,7 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off MIPS -c MIPS
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS -c MIPS --vector_source=C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/Waveform4.vwf --testbench_file=C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/simulation/qsim/Waveform4.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/simulation/qsim/ MIPS -c MIPS
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS -c MIPS --vector_source=C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/Waveform4.vwf --testbench_file=C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/simulation/qsim/Waveform4.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/simulation/qsim/ MIPS -c MIPS
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS -c MIPS --vector_source=C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/Waveform2.vwf --testbench_file=C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/simulation/qsim/Waveform2.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/simulation/qsim/ MIPS -c MIPS
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS -c MIPS --vector_source=C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/Waveform3.vwf --testbench_file=C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/simulation/qsim/Waveform3.vwf.vht
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS -c MIPS --vector_source=C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/Waveform6.vwf --testbench_file=C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/simulation/qsim/Waveform6.vwf.vht
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/simulation/qsim/ MIPS -c MIPS
 
 
