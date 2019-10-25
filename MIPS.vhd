@@ -12,7 +12,9 @@ entity MIPS is
 		
 	port(
 		clk, we_uc : in std_logic; 
-		ula_instr: in std_logic_vector(5 downto 0)
+		ula_instr: in std_logic;
+		ula_out_teste: out std_logic_vector(31 downto 0);
+		pc_out_teste: out std_logic_vector(31 downto 0)
 
 	);
 end entity;
@@ -33,8 +35,7 @@ architecture MIPS_top of MIPS is
 				IN_mux=>s1,
 				IN_banco=>s2,
 				OP=>ula_instr, ----
-				S=>ula_out,
-				FLAG=>flag_uc
+				S=>ula_out
 		);
 		
 		
@@ -69,5 +70,8 @@ architecture MIPS_top of MIPS is
 			Dado => rom_data, 
 			Endereco => pc_out --
 		);
+		
+		ula_out_teste <= ula_out;
+		pc_out_teste <= pc_out;
 	end;
 	

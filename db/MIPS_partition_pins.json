@@ -1,0 +1,269 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ula_out_teste[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[14]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[15]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[16]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[17]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[18]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[19]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[20]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[21]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[22]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[23]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[24]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[25]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[26]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[27]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[28]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[29]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[30]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_out_teste[31]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[8]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[9]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[10]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[11]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[12]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[13]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[14]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[15]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[16]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[17]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[18]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[19]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[20]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[21]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[22]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[23]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[24]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[25]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[26]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[27]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[28]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[29]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[30]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out_teste[31]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_instr",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "we_uc",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

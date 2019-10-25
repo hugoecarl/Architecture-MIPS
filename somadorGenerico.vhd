@@ -16,5 +16,5 @@ end entity;
 
 architecture comportamento of somadorGenerico is
     begin
-        saida <= STD_LOGIC_VECTOR(unsigned(entradaA) + "1");
+        saida <= STD_LOGIC_VECTOR(unsigned(entradaA) + 4);
 end architecture;

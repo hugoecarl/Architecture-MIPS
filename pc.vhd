@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 entity PC is
 	generic
     (
-        addr : natural := 8
+        addr : natural := 32
     );
         port
         (

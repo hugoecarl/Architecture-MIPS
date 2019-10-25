@@ -21,7 +21,7 @@ entity BancoDeRegistradores is
 --
         dadoEscritaC    : in std_logic_vector((larguraDados-1) downto 0);
 --
-        escreveC        : in std_logic := '0';
+        escreveC        : in std_logic;
         saidaA          : out std_logic_vector((larguraDados -1) downto 0);
         saidaB          : out std_logic_vector((larguraDados -1) downto 0)
     );
@@ -32,8 +32,19 @@ architecture comportamento of BancoDeRegistradores is
     subtype palavra_t is std_logic_vector((larguraDados-1) downto 0);
     type memoria_t is array(2**larguraEndBancoRegs-1 downto 0) of palavra_t;
 
+	   function initMemory
+        return memoria_t is variable tmp : memoria_t := (others => (others => '0'));
+  begin
+        -- Inicializa os endereços:
+        tmp(9) := x"00000004";
+        tmp(10) := x"00000003";
+        tmp(11) := x"00000002";
+        return tmp;
+    end initMemory;
+
     -- Declaracao dos registradores:
-    shared variable registrador : memoria_t;
+    shared variable registrador : memoria_t  := initMemory;
+
 
 begin
     process(clk) is
