@@ -15,7 +15,10 @@ entity MIPS is
 		ula_instr: in std_logic;
 		we_ram : in std_logic;
 		mux_rt_imed : in std_logic;
-		BEQ : in std_logic
+		BEQ : in std_logic;
+		PC_Teste : out std_logic_vector(31 downto 0);
+		ula_out_teste: out std_logic_vector(31 downto 0);
+		DadoRegTeste : out std_logic_vector(31 downto 0);
 
 	);
 end entity;
@@ -121,6 +124,10 @@ architecture MIPS_top of MIPS is
 			entradaB => BEQ,
 			saida => selmux_pc
 		);
+		
+		PC_Teste <= pc_out;
+		ula_out_teste <= ula_out;
+		
 		
 		
 	end;
