@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity estendeSinalGenerico is
+entity extensorGenerico is
     generic
     (
         larguraDadoEntrada : natural  :=    16;
@@ -16,7 +16,7 @@ entity estendeSinalGenerico is
     );
 end entity;
 
-architecture comportamento of estendeSinalGenerico is
+architecture comportamento of extensorGenerico is
 begin
     process (estendeSinal_IN) is
     begin

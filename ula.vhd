@@ -14,7 +14,8 @@ entity ULA is
 			clk: in std_logic;
 			IN_mux, IN_banco: in std_logic_vector (addr-1 downto 0);
 			OP: in std_logic; 
-			S: out std_logic_vector (addr-1 downto 0)
+			S: out std_logic_vector (addr-1 downto 0);
+			FLAG: out std_logic
 			);
 
 end entity ULA;
@@ -31,5 +32,7 @@ begin
 	with OP select
 	S <=		resultadoAdd when '0',
 				resultadoSub when others;
-
+	
+	FLAG <= '1' when IN_mux = IN_banco else '0';
+					
 end architecture;
