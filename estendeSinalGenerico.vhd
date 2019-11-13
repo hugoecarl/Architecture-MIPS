@@ -4,8 +4,8 @@ use ieee.std_logic_1164.all;
 entity estendeSinalGenerico is
     generic
     (
-        larguraDadoEntrada : natural  :=    16;
-        larguraDadoSaida   : natural  :=    32
+        larguraDadoEntrada : natural  :=    8;
+        larguraDadoSaida   : natural  :=    8
     );
     port
     (
