@@ -1,5 +1,5 @@
 Flow report for mips
-Wed Nov 13 08:28:08 2019
+Thu Nov 28 19:26:23 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,22 +40,22 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Flow Failed - Wed Nov 13 08:28:08 2019      ;
+; Flow Status                        ; Successful - Thu Nov 28 19:26:23 2019       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; mips                                        ;
 ; Top-level Entity Name              ; mips                                        ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 708 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 598 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 374 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 375                                         ;
+; Total pins                         ; 47 / 529 ( 9 % )                            ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 4,096 / 3,981,312 ( < 1 % )                 ;
+; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/13/2019 08:27:45 ;
+; Start date & time ; 11/28/2019 19:24:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mips                ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 218381590981916.157364446414848        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 218381590981916.157497989501292        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -94,29 +94,41 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:25     ; 1.0                     ; 4766 MB             ; 00:00:55                           ;
-; Total                ; 00:00:25     ; --                      ; --                  ; 00:00:55                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:25     ; 1.0                     ; 4804 MB             ; 00:00:49                           ;
+; Fitter                    ; 00:00:34     ; 1.0                     ; 5614 MB             ; 00:00:49                           ;
+; Assembler                 ; 00:00:10     ; 1.0                     ; 4676 MB             ; 00:00:09                           ;
+; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 4829 MB             ; 00:00:07                           ;
+; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 4653 MB             ; 00:00:04                           ;
+; Total                     ; 00:01:20     ; --                      ; --                  ; 00:01:58                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-VEV0473  ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++-----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                         ;
++---------------------------+------------------+------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++---------------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis      ; DESKTOP-VEV0473  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; DESKTOP-VEV0473  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; DESKTOP-VEV0473  ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-VEV0473  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-VEV0473  ; Windows 10 ; 10.0       ; x86_64         ;
++---------------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off mips -c mips
+quartus_fit --read_settings_files=off --write_settings_files=off mips -c mips
+quartus_asm --read_settings_files=off --write_settings_files=off mips -c mips
+quartus_sta mips -c mips
+quartus_eda --read_settings_files=off --write_settings_files=off mips -c mips
 
 
 

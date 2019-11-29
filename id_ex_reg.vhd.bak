@@ -1,0 +1,40 @@
+-- Quartus Prime VHDL Template
+-- Basic Shift Register
+
+library ieee;
+use ieee.std_logic_1164.all;
+use work.constantesMIPS.all;
+
+entity id_ex_reg is
+
+
+	port 
+	(
+		clk		: in std_logic;
+		bancoregout1	    : in std_logic_vector(DATA_WIDTH-1 downto 0);
+		bancoregout2	: in std_logic_vector(DATA_WIDTH-1 downto 0);
+		reg1out	 : in std_logic_vector(DATA_WIDTH-1 downto 0);
+		sigextout	: in std_logic_vector(DATA_WIDTH-1 downto 0);
+		inAlu	    : out std_logic_vector(DATA_WIDTH-1 downto 0);
+		inAdder	: out std_logic_vector(DATA_WIDTH-1 downto 0);
+		inMux	 : out std_logic_vector(DATA_WIDTH-1 downto 0);
+		inShifter	: out std_logic_vector(DATA_WIDTH-1 downto 0);
+	
+	);
+
+end entity;
+
+architecture rtl of id_ex_reg is
+
+begin
+	process (clk, reset)
+		begin
+			if (rising_edge(clk)) then
+				inAlu <= bancoregout1;
+				inMux <= bancoregout2;
+				inAdder <= reg1out;
+				inShifter <= sigextout;
+			end if;
+	end process;
+
+end rtl;

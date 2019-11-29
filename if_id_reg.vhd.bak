@@ -1,0 +1,46 @@
+-- Quartus Prime VHDL Template
+-- Basic Shift Register
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity if_id_reg is
+
+	generic
+	(
+		NUM_STAGES : natural := 256
+	);
+
+	port 
+	(
+		clk		: in std_logic;
+		pc_in	    : in std_logic;
+		pc_out	: out std_logic;
+		rom_in	 : in std_logic;
+		rom_out	: out std_logic;
+	);
+
+end entity;
+
+architecture rtl of if_id_reg is
+
+	signal data_s : std_logic_vector(NUM_BITS - 1 downto 0) := (OTHERS=>'0');
+begin
+	process (clk, reset)
+		begin
+			-- Reset whenever the reset signal goes low, regardless of the clock
+			-- or the clock enable
+			if (reset = '0') then
+				data_s <= (OTHERS =>'0');
+			-- If not resetting, and the clock signal is enabled on this register, 
+			-- update the register output on the clock's rising edge
+			elsif (rising_edge(clk)) then
+				if (enable = '1') then
+					data_s <= data_in;
+				end if;
+			end if;
+		end process;
+
+		data_out <= data_s;
+
+end rtl;

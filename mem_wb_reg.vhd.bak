@@ -1,0 +1,33 @@
+-- Quartus Prime VHDL Template
+-- Basic Shift Register
+
+library ieee;
+use ieee.std_logic_1164.all;
+use work.constantesMIPS.all;
+
+entity mem_wb_reg is
+
+
+	port 
+	(
+		clk		: in std_logic;
+		ram_out	    : in std_logic_vector(DATA_WIDTH-1 downto 0);
+		exmemreg_out	: in std_logic_vector(DATA_WIDTH-1 downto 0);
+		mux_0ent	 : out std_logic_vector(DATA_WIDTH-1 downto 0);
+		mux_1ent	: out std_logic_vector(DATA_WIDTH-1 downto 0);
+	);
+
+end entity;
+
+architecture rtl of mem_wb_reg is
+
+begin
+	process (clk, reset)
+		begin
+			if (rising_edge(clk)) then
+				mux_0ent <= ram_out;
+				mux_1ent <= exmemreg_out;
+			end if;
+	end process;
+
+end rtl;

@@ -1,0 +1,42 @@
+Quartus Prime Archive log --	C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/mips_Hugo_Guilherme_Rafael.qarlog
+
+Archive:	C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/mips_Hugo_Guilherme_Rafael.qar
+Date:		Thu Nov 28 19:15:25 2019
+Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/ROM.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/Registrador.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/UC_ULA.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/ULA.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/Waveform.vwf
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/assignment_defaults.qdf
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/bancoRegistradores.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/botoes.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/clock_generator.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/constantesMIPS.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/conversorHex7Seg.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/edgeDetector.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/estendeSinalGenerico.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/ex_mem_reg.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/fluxo_dados.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/hex7seg_top.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/id_ex_reg.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/if_id_reg.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/mem_wb_reg.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/mips.qpf
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/mips.qsf
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/mips.sdc
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/mips.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/muxGenerico2.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/reg4.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/shift2.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/shift2_imediato.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/single_port_RAM.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/soma4.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/somador.vhd
+C:/Users/hugoc/Desktop/Insper/descomp/Arquitetura-MIPS/uc.vhd
+	======= Total: 31 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
